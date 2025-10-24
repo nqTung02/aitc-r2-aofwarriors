@@ -1,0 +1,59 @@
+Successfully loaded data from data/financial_highlights.json.
+Temporary directory for charts: C:\Users\LEGION\AppData\Local\Temp\tmpbcp0qjkg
+Created title slide: 'Báo Cáo Tài Chính và Hoạt Động Doanh Nghiệp Q2/2024'
+Created section header slide: 'I. Tổng Quan Hiệu Suất Tài Chính'
+Created title and content slide: 'Tóm Tắt Kết Quả Kinh Doanh Q2/2024'
+Created chart 'Tổng Thu Nhập Hoạt Động (Tỷ VND)' and saved to C:\Users\LEGION\AppData\Local\Temp\tmpbcp0qjkg\chart_Total_operating_income_bar.png
+Created chart slide: 'Biểu Đồ Doanh Thu Theo Sản Phẩm Q2/2024'
+Created chart 'Lợi Nhuận Trước Thuế (Tỷ VND)' and saved to C:\Users\LEGION\AppData\Local\Temp\tmpbcp0qjkg\chart_Profit_before_tax_line.png
+Created chart slide: 'Xu Hướng Lợi Nhuận Trước Thuế'
+Traceback (most recent call last):
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 84, in _write
+    self._write_content_types_stream(phys_writer)
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 94, in _write_content_types_stream
+    phys_writer.write(
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 236, in write
+    self._zipf.writestr(pack_uri.membername, blob)
+    ^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\util.py", line 191, in __get__
+    value = self._fget(obj)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 241, in _zipf
+    return zipfile.ZipFile(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv\pyenv-win\versions\3.12.8\Lib\zipfile\__init__.py", line 1331, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'Bao_Cao_Tai_Chinh_Doanh_Nghiep.pptx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\aitc-r2-aofwarriors\scripts\generated_report_script.py", line 359, in <module>
+    create_presentation(slide_definitions, financial_data, OUTPUT_PPTX_FILENAME)
+  File "D:\aitc-r2-aofwarriors\scripts\generated_report_script.py", line 354, in create_presentation
+    prs.save(output_filename)
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\presentation.py", line 50, in save
+    self.part.save(file)
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\parts\presentation.py", line 112, in save
+    self.package.save(path_or_stream)
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\package.py", line 156, in save
+    PackageWriter.write(pkg_file, self._rels, tuple(self.iter_parts()))
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 79, in write
+    cls(pkg_file, pkg_rels, parts)._write()
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 83, in _write
+    with _PhysPkgWriter.factory(self._pkg_file) as phys_writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 232, in __exit__
+    self._zipf.close()
+    ^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\util.py", line 191, in __get__
+    value = self._fget(obj)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv-win-venv\envs\AITC\Lib\site-packages\pptx\opc\serialized.py", line 241, in _zipf
+    return zipfile.ZipFile(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\LEGION\.pyenv\pyenv-win\versions\3.12.8\Lib\zipfile\__init__.py", line 1331, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'Bao_Cao_Tai_Chinh_Doanh_Nghiep.pptx'
